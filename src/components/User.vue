@@ -13,10 +13,17 @@ export default {
     return {
      id:'none',
      name:'',
-     passwrod:""
+     passwrod:"",
+     
     }
   },
   created() {
+if(!this.$store.state.token)
+{
+this.$router.push({name:'REGISTER'})
+}
+
+   // alert(this.$store.state.token)
     // this is used to access the parameters passed in query
 this.id= this.$route.params.id
 console.log('query is here', this.$route.query.name)

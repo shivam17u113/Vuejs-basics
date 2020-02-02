@@ -29,6 +29,8 @@ export default {
       {
 console.log('register ',this.register) 
 
+// this is used to set value for any field from store
+this.$store.state.token='shivam_dates_ankita'
 
 // this is used to go to another page
 // in this case we are using the name of router for redirecting 

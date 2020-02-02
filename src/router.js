@@ -47,18 +47,18 @@ export default new Router({
     },
     {
       path: '/details',
-      name: 'second',
+      name: 'SECOND',
       component: UserDetsils
     },
     {
         path: '',
-        name: 'register',
+        name: 'REGISTER',
         component: Register
       },
       // for any case where page is not avaialbe
       {
         path: '*',
-        name: 'NotFound',
+        name: 'NOTFOUND',
         component: NotFound
       }
   

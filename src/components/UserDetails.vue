@@ -11,7 +11,13 @@ export default {
     return {
      
     }
-  }
+  },
+  created() {
+    if(!this.$store.state.token)
+{
+this.$router.push({name:'REGISTER'})
+}
+  },
 }
 </script>
 
