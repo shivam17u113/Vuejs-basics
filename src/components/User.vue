@@ -1,6 +1,8 @@
 <template>
   <div >
-    <h1>user</h1>
+    <h1>user id is {{ id }}</h1>
+    <h2>name is {{name }}</h2>
+    <h3>password is {{passwrod}}</h3>
   </div>
 </template>
 
@@ -9,9 +11,20 @@ export default {
  
   data () {
     return {
-     
+     id:'none',
+     name:'',
+     passwrod:""
     }
-  }
+  },
+  created() {
+    // this is used to access the parameters passed in query
+this.id= this.$route.params.id
+console.log('query is here', this.$route.query.name)
+
+// accessing the query parameters
+this.name= this.$route.query.name
+this.passwrod=this.$route.query.password
+  },
 }
 </script>
 
